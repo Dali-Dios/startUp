@@ -1,0 +1,42 @@
+<?php //echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<?php echo $this->headMeta()->appendHttpEquiv('Content-type','text/html;charset='.$this->getEncoding()); ?>
+		<?php echo $this->headTitle(); ?>
+		<?php echo $this->headScript(); ?>
+		<?php echo $this->jQuery();?>
+	</head>
+	<body>
+		<script type="text/css">
+			.alert {
+    color: red;
+			}
+
+			.alert .flash-message:before {
+					content: "<strong>Alert</strong> ";
+			}
+
+			.notice {
+				 color:yellow;
+			}
+
+			.notice .flash-message:before {
+					content: "<strong>Notice</strong> ";
+		}
+		</script>
+			<div>
+				<?php echo $this->navigation()
+													->menu()
+													;?>
+			</div>
+			<div id="content">
+				
+					<?php echo  $this->placeholder('flashMessages'); ?>
+				<?php echo $this->layout()->content; ?>	
+			</div>
+			
+				
+			
+		
+	</body>
+</html>

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/sityPhoto/!svn/ver/6/trunk/www
+END
+.htaccess
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/sityPhoto/!svn/ver/7/trunk/www/.htaccess
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/sityPhoto/!svn/ver/6/trunk/www/index.php
+END

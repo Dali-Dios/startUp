@@ -1,0 +1,78 @@
+<?php
+
+class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
+{
+	protected function _initAutoload()
+	{
+		$modelLoader=new Zend_Application_Module_Autoloader(array
+		(
+			'namespace' => '', 
+			'basePath' => APPLICATION_PATH
+		));
+		
+		return $modelLoader;
+	}
+	
+	protected function _initPlugings()
+	{
+		/*$roles=My_Acl::GUEST;
+		if (Zend_Auth::getInstance()->hasIdentity())
+		{
+			$roles=Zend_Auth::getInstance()->getIdentity()->roles;
+		}
+		Zend_Registry::set('roles',new My_Acl_Role_Container($roles));
+		
+		$fc=Zend_Controller_Front::getInstance();
+		
+		$fc->registerPlugin(new Plugin_AccessCheck());
+		$fc->registerPlugin(new Plugin_FlashMessages());
+                 * 
+                 */
+	}
+	
+	protected function _initHelpers()
+	{
+	}
+	
+	protected function _initJQueryContainer()
+	{
+		//Zend_Registry::set('ZendX_JQuery_View_Helper_JQuery',new My_JQuery_View_Helper_JQuery_Container());
+	}
+	
+	protected function _initHead()
+	{
+		/*$this->bootstrap('view');
+		$view = $this->getResource('view');
+		$view->doctype('XHTML11');
+		$view->headMeta()->appendHttpEquiv('Content-type','text/html;charset='.$view->getEncoding());
+		
+		$view->headTitle()->setSeparator(' | ');
+		$view->headTitle()->headTitle($view->translate('Photo'),'PREPEND');
+		*/
+		//$view->headScript()->add('config');
+		
+		
+		
+		//$view->render('onLoadFucntions.phtml');
+		
+		
+	}
+	
+	protected function _initConfig()
+	{
+		$config=new Zend_Config_Ini(APPLICATION_PATH . '/configs/application.ini');
+		Zend_Registry::set('config',$config);
+	}
+
+	protected function _initDefaultSettings()
+	{
+		/*Zend_View_Helper_Navigation_HelperAbstract::setDefaultAcl(My_Acl::getInstance());
+		Zend_View_Helper_Navigation_HelperAbstract::setDefaultRole(Zend_Registry::get('roles'));
+		
+		Zend_Paginator::setDefaultScrollingStyle('Sliding');
+		Zend_View_Helper_PaginationControl::setDefaultViewPartial('frontPagination.phtml');
+                 * 
+                 */
+	}
+}
+

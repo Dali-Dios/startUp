@@ -1,0 +1,9 @@
+<? //echo $this->language->_('olo');
+?>
+<br /><br /><center><?=$this->msg?></center>
+
+
+
+
+
+
